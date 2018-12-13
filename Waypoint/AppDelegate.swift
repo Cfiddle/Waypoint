@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Waypoint
 //
-//  Created by Charles Fiedler on 12/13/18.
+//  Created by Charles Fiedler on 12/7/18.
 //  Copyright © 2018 Charles Fiedler. All rights reserved.
 //
 
@@ -12,7 +12,6 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

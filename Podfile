@@ -6,6 +6,5 @@ target 'Waypoint' do
   use_frameworks!
 
   # Pods for Waypoint
-  pod 'DJI-SDK-iOS', '~> 4.8.1'
-
+  pod 'DJI-SDK-iOS', '4.8.1'
 end
