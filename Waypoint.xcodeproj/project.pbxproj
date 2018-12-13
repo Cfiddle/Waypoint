@@ -7,104 +7,83 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1DC5AE9221BB2E1800B20381 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5AE9121BB2E1800B20381 /* AppDelegate.swift */; };
-		1DC5AE9421BB2E1800B20381 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5AE9321BB2E1800B20381 /* ViewController.swift */; };
-		1DC5AE9721BB2E1800B20381 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DC5AE9521BB2E1800B20381 /* Main.storyboard */; };
-		1DC5AE9921BB2E1900B20381 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DC5AE9821BB2E1900B20381 /* Assets.xcassets */; };
-		1DC5AE9C21BB2E1900B20381 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DC5AE9A21BB2E1900B20381 /* LaunchScreen.storyboard */; };
-		1DC5AEA821BB3A1A00B20381 /* DJIRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5AEA721BB3A1A00B20381 /* DJIRootViewController.swift */; };
-		1DC5AEAA21BC588200B20381 /* DJIMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5AEA921BC588200B20381 /* DJIMapController.swift */; };
-		1DC5AEAD21BF0FCD00B20381 /* DJIAircraftAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5AEAC21BF0FCD00B20381 /* DJIAircraftAnnotationView.swift */; };
-		1DC5AEAF21BF172C00B20381 /* DJIAircraftAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5AEAE21BF172C00B20381 /* DJIAircraftAnnotation.swift */; };
-		1DC5AEB121C032FD00B20381 /* DemoUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5AEB021C032FD00B20381 /* DemoUtility.swift */; };
-		1DC5AEB321C07FD700B20381 /* DJIComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5AEB221C07FD700B20381 /* DJIComponent.swift */; };
-		1DC5AEC321C1775900B20381 /* ProductCommunicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5AEC221C1775900B20381 /* ProductCommunicationManager.swift */; };
-		D4159597260113CC7B7D5959 /* Pods_Waypoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B0265E8F3C6605EC6101053 /* Pods_Waypoint.framework */; };
+		1DC5AEEF21C2DC5900B20381 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5AEEE21C2DC5900B20381 /* AppDelegate.swift */; };
+		1DC5AEF121C2DC5900B20381 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5AEF021C2DC5900B20381 /* ViewController.swift */; };
+		1DC5AEF421C2DC5900B20381 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DC5AEF221C2DC5900B20381 /* Main.storyboard */; };
+		1DC5AEF621C2DC5A00B20381 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DC5AEF521C2DC5A00B20381 /* Assets.xcassets */; };
+		1DC5AEF921C2DC5A00B20381 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DC5AEF721C2DC5A00B20381 /* LaunchScreen.storyboard */; };
+		39437ECD93CC713E3F531FAB /* Pods_Waypoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2483F1F2F86BF8033881B1A /* Pods_Waypoint.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1DC5AE8E21BB2E1800B20381 /* Waypoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Waypoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1DC5AE9121BB2E1800B20381 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1DC5AE9321BB2E1800B20381 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1DC5AE9621BB2E1800B20381 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1DC5AE9821BB2E1900B20381 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1DC5AE9B21BB2E1900B20381 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		1DC5AE9D21BB2E1900B20381 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1DC5AEA721BB3A1A00B20381 /* DJIRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJIRootViewController.swift; sourceTree = "<group>"; };
-		1DC5AEA921BC588200B20381 /* DJIMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJIMapController.swift; sourceTree = "<group>"; };
-		1DC5AEAC21BF0FCD00B20381 /* DJIAircraftAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJIAircraftAnnotationView.swift; sourceTree = "<group>"; };
-		1DC5AEAE21BF172C00B20381 /* DJIAircraftAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJIAircraftAnnotation.swift; sourceTree = "<group>"; };
-		1DC5AEB021C032FD00B20381 /* DemoUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUtility.swift; sourceTree = "<group>"; };
-		1DC5AEB221C07FD700B20381 /* DJIComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJIComponent.swift; sourceTree = "<group>"; };
-		1DC5AEC221C1775900B20381 /* ProductCommunicationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCommunicationManager.swift; sourceTree = "<group>"; };
-		3B0265E8F3C6605EC6101053 /* Pods_Waypoint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Waypoint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B5DE5BA36FBB4B93788AFDF /* Pods-Waypoint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Waypoint.release.xcconfig"; path = "Pods/Target Support Files/Pods-Waypoint/Pods-Waypoint.release.xcconfig"; sourceTree = "<group>"; };
-		752D75D3A05A26BBFD9ED163 /* Pods-Waypoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Waypoint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Waypoint/Pods-Waypoint.debug.xcconfig"; sourceTree = "<group>"; };
+		1DC5AEEB21C2DC5900B20381 /* Waypoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Waypoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DC5AEEE21C2DC5900B20381 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1DC5AEF021C2DC5900B20381 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1DC5AEF321C2DC5900B20381 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1DC5AEF521C2DC5A00B20381 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1DC5AEF821C2DC5A00B20381 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1DC5AEFA21C2DC5A00B20381 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		561DC358893CC287888AF93B /* Pods-Waypoint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Waypoint.release.xcconfig"; path = "Pods/Target Support Files/Pods-Waypoint/Pods-Waypoint.release.xcconfig"; sourceTree = "<group>"; };
+		EBB5484E5697A305D18637D0 /* Pods-Waypoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Waypoint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Waypoint/Pods-Waypoint.debug.xcconfig"; sourceTree = "<group>"; };
+		F2483F1F2F86BF8033881B1A /* Pods_Waypoint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Waypoint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1DC5AE8B21BB2E1800B20381 /* Frameworks */ = {
+		1DC5AEE821C2DC5900B20381 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4159597260113CC7B7D5959 /* Pods_Waypoint.framework in Frameworks */,
+				39437ECD93CC713E3F531FAB /* Pods_Waypoint.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1DC5AE8521BB2E1800B20381 = {
+		1DC5AEE221C2DC5900B20381 = {
 			isa = PBXGroup;
 			children = (
-				1DC5AE9021BB2E1800B20381 /* Waypoint */,
-				1DC5AE8F21BB2E1800B20381 /* Products */,
-				6FEA9F4443469B2BCBF66418 /* Pods */,
-				83C26B86444AA3A14F188377 /* Frameworks */,
+				1DC5AEED21C2DC5900B20381 /* Waypoint */,
+				1DC5AEEC21C2DC5900B20381 /* Products */,
+				84F3418D1FA1B8D87AF1239C /* Pods */,
+				ACD10D0BA2299EC6E4DF851C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		1DC5AE8F21BB2E1800B20381 /* Products */ = {
+		1DC5AEEC21C2DC5900B20381 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1DC5AE8E21BB2E1800B20381 /* Waypoint.app */,
+				1DC5AEEB21C2DC5900B20381 /* Waypoint.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1DC5AE9021BB2E1800B20381 /* Waypoint */ = {
+		1DC5AEED21C2DC5900B20381 /* Waypoint */ = {
 			isa = PBXGroup;
 			children = (
-				1DC5AE9121BB2E1800B20381 /* AppDelegate.swift */,
-				1DC5AE9321BB2E1800B20381 /* ViewController.swift */,
-				1DC5AE9521BB2E1800B20381 /* Main.storyboard */,
-				1DC5AE9821BB2E1900B20381 /* Assets.xcassets */,
-				1DC5AE9A21BB2E1900B20381 /* LaunchScreen.storyboard */,
-				1DC5AE9D21BB2E1900B20381 /* Info.plist */,
-				1DC5AEA721BB3A1A00B20381 /* DJIRootViewController.swift */,
-				1DC5AEA921BC588200B20381 /* DJIMapController.swift */,
-				1DC5AEAC21BF0FCD00B20381 /* DJIAircraftAnnotationView.swift */,
-				1DC5AEAE21BF172C00B20381 /* DJIAircraftAnnotation.swift */,
-				1DC5AEB021C032FD00B20381 /* DemoUtility.swift */,
-				1DC5AEB221C07FD700B20381 /* DJIComponent.swift */,
-				1DC5AEC221C1775900B20381 /* ProductCommunicationManager.swift */,
+				1DC5AEEE21C2DC5900B20381 /* AppDelegate.swift */,
+				1DC5AEF021C2DC5900B20381 /* ViewController.swift */,
+				1DC5AEF221C2DC5900B20381 /* Main.storyboard */,
+				1DC5AEF521C2DC5A00B20381 /* Assets.xcassets */,
+				1DC5AEF721C2DC5A00B20381 /* LaunchScreen.storyboard */,
+				1DC5AEFA21C2DC5A00B20381 /* Info.plist */,
 			);
 			path = Waypoint;
 			sourceTree = "<group>";
 		};
-		6FEA9F4443469B2BCBF66418 /* Pods */ = {
+		84F3418D1FA1B8D87AF1239C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				752D75D3A05A26BBFD9ED163 /* Pods-Waypoint.debug.xcconfig */,
-				5B5DE5BA36FBB4B93788AFDF /* Pods-Waypoint.release.xcconfig */,
+				EBB5484E5697A305D18637D0 /* Pods-Waypoint.debug.xcconfig */,
+				561DC358893CC287888AF93B /* Pods-Waypoint.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		83C26B86444AA3A14F188377 /* Frameworks */ = {
+		ACD10D0BA2299EC6E4DF851C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3B0265E8F3C6605EC6101053 /* Pods_Waypoint.framework */,
+				F2483F1F2F86BF8033881B1A /* Pods_Waypoint.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -112,15 +91,15 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1DC5AE8D21BB2E1800B20381 /* Waypoint */ = {
+		1DC5AEEA21C2DC5900B20381 /* Waypoint */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DC5AEA021BB2E1900B20381 /* Build configuration list for PBXNativeTarget "Waypoint" */;
+			buildConfigurationList = 1DC5AEFD21C2DC5A00B20381 /* Build configuration list for PBXNativeTarget "Waypoint" */;
 			buildPhases = (
-				0C5D59B272022064A77FCB51 /* [CP] Check Pods Manifest.lock */,
-				1DC5AE8A21BB2E1800B20381 /* Sources */,
-				1DC5AE8B21BB2E1800B20381 /* Frameworks */,
-				1DC5AE8C21BB2E1800B20381 /* Resources */,
-				16396F078C4A2EE97C8D7D32 /* [CP] Embed Pods Frameworks */,
+				EB4EF60ED8F8D87A34BF2A2F /* [CP] Check Pods Manifest.lock */,
+				1DC5AEE721C2DC5900B20381 /* Sources */,
+				1DC5AEE821C2DC5900B20381 /* Frameworks */,
+				1DC5AEE921C2DC5900B20381 /* Resources */,
+				1A83304648B61BD7A78EA6F7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,25 +107,25 @@
 			);
 			name = Waypoint;
 			productName = Waypoint;
-			productReference = 1DC5AE8E21BB2E1800B20381 /* Waypoint.app */;
+			productReference = 1DC5AEEB21C2DC5900B20381 /* Waypoint.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1DC5AE8621BB2E1800B20381 /* Project object */ = {
+		1DC5AEE321C2DC5900B20381 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Charles Fiedler";
 				TargetAttributes = {
-					1DC5AE8D21BB2E1800B20381 = {
+					1DC5AEEA21C2DC5900B20381 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
-			buildConfigurationList = 1DC5AE8921BB2E1800B20381 /* Build configuration list for PBXProject "Waypoint" */;
+			buildConfigurationList = 1DC5AEE621C2DC5900B20381 /* Build configuration list for PBXProject "Waypoint" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -154,53 +133,31 @@
 				en,
 				Base,
 			);
-			mainGroup = 1DC5AE8521BB2E1800B20381;
-			productRefGroup = 1DC5AE8F21BB2E1800B20381 /* Products */;
+			mainGroup = 1DC5AEE221C2DC5900B20381;
+			productRefGroup = 1DC5AEEC21C2DC5900B20381 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1DC5AE8D21BB2E1800B20381 /* Waypoint */,
+				1DC5AEEA21C2DC5900B20381 /* Waypoint */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1DC5AE8C21BB2E1800B20381 /* Resources */ = {
+		1DC5AEE921C2DC5900B20381 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DC5AE9C21BB2E1900B20381 /* LaunchScreen.storyboard in Resources */,
-				1DC5AE9921BB2E1900B20381 /* Assets.xcassets in Resources */,
-				1DC5AE9721BB2E1800B20381 /* Main.storyboard in Resources */,
+				1DC5AEF921C2DC5A00B20381 /* LaunchScreen.storyboard in Resources */,
+				1DC5AEF621C2DC5A00B20381 /* Assets.xcassets in Resources */,
+				1DC5AEF421C2DC5900B20381 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0C5D59B272022064A77FCB51 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Waypoint-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		16396F078C4A2EE97C8D7D32 /* [CP] Embed Pods Frameworks */ = {
+		1A83304648B61BD7A78EA6F7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -222,40 +179,55 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Waypoint/Pods-Waypoint-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EB4EF60ED8F8D87A34BF2A2F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Waypoint-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1DC5AE8A21BB2E1800B20381 /* Sources */ = {
+		1DC5AEE721C2DC5900B20381 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DC5AEA821BB3A1A00B20381 /* DJIRootViewController.swift in Sources */,
-				1DC5AE9421BB2E1800B20381 /* ViewController.swift in Sources */,
-				1DC5AEB121C032FD00B20381 /* DemoUtility.swift in Sources */,
-				1DC5AEAF21BF172C00B20381 /* DJIAircraftAnnotation.swift in Sources */,
-				1DC5AEAA21BC588200B20381 /* DJIMapController.swift in Sources */,
-				1DC5AEAD21BF0FCD00B20381 /* DJIAircraftAnnotationView.swift in Sources */,
-				1DC5AEC321C1775900B20381 /* ProductCommunicationManager.swift in Sources */,
-				1DC5AE9221BB2E1800B20381 /* AppDelegate.swift in Sources */,
-				1DC5AEB321C07FD700B20381 /* DJIComponent.swift in Sources */,
+				1DC5AEF121C2DC5900B20381 /* ViewController.swift in Sources */,
+				1DC5AEEF21C2DC5900B20381 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1DC5AE9521BB2E1800B20381 /* Main.storyboard */ = {
+		1DC5AEF221C2DC5900B20381 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1DC5AE9621BB2E1800B20381 /* Base */,
+				1DC5AEF321C2DC5900B20381 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		1DC5AE9A21BB2E1900B20381 /* LaunchScreen.storyboard */ = {
+		1DC5AEF721C2DC5A00B20381 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1DC5AE9B21BB2E1900B20381 /* Base */,
+				1DC5AEF821C2DC5A00B20381 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -263,7 +235,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		1DC5AE9E21BB2E1900B20381 /* Debug */ = {
+		1DC5AEFB21C2DC5A00B20381 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -324,7 +296,7 @@
 			};
 			name = Debug;
 		};
-		1DC5AE9F21BB2E1900B20381 /* Release */ = {
+		1DC5AEFC21C2DC5A00B20381 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -379,17 +351,14 @@
 			};
 			name = Release;
 		};
-		1DC5AEA121BB2E1900B20381 /* Debug */ = {
+		1DC5AEFE21C2DC5A00B20381 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 752D75D3A05A26BBFD9ED163 /* Pods-Waypoint.debug.xcconfig */;
+			baseConfigurationReference = EBB5484E5697A305D18637D0 /* Pods-Waypoint.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 62W5236K33;
-				ENABLE_BITCODE = NO;
-				HEADER_SEARCH_PATHS = "$(PODS_ROOT)/Headers/Public";
 				INFOPLIST_FILE = Waypoint/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -401,17 +370,14 @@
 			};
 			name = Debug;
 		};
-		1DC5AEA221BB2E1900B20381 /* Release */ = {
+		1DC5AEFF21C2DC5A00B20381 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B5DE5BA36FBB4B93788AFDF /* Pods-Waypoint.release.xcconfig */;
+			baseConfigurationReference = 561DC358893CC287888AF93B /* Pods-Waypoint.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 62W5236K33;
-				ENABLE_BITCODE = NO;
-				HEADER_SEARCH_PATHS = "$(PODS_ROOT)/Headers/Public";
 				INFOPLIST_FILE = Waypoint/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -426,25 +392,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DC5AE8921BB2E1800B20381 /* Build configuration list for PBXProject "Waypoint" */ = {
+		1DC5AEE621C2DC5900B20381 /* Build configuration list for PBXProject "Waypoint" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1DC5AE9E21BB2E1900B20381 /* Debug */,
-				1DC5AE9F21BB2E1900B20381 /* Release */,
+				1DC5AEFB21C2DC5A00B20381 /* Debug */,
+				1DC5AEFC21C2DC5A00B20381 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DC5AEA021BB2E1900B20381 /* Build configuration list for PBXNativeTarget "Waypoint" */ = {
+		1DC5AEFD21C2DC5A00B20381 /* Build configuration list for PBXNativeTarget "Waypoint" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1DC5AEA121BB2E1900B20381 /* Debug */,
-				1DC5AEA221BB2E1900B20381 /* Release */,
+				1DC5AEFE21C2DC5A00B20381 /* Debug */,
+				1DC5AEFF21C2DC5A00B20381 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 1DC5AE8621BB2E1800B20381 /* Project object */;
+	rootObject = 1DC5AEE321C2DC5900B20381 /* Project object */;
 }
