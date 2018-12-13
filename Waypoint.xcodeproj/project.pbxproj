@@ -1,0 +1,450 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DC5AE9221BB2E1800B20381 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5AE9121BB2E1800B20381 /* AppDelegate.swift */; };
+		1DC5AE9421BB2E1800B20381 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5AE9321BB2E1800B20381 /* ViewController.swift */; };
+		1DC5AE9721BB2E1800B20381 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DC5AE9521BB2E1800B20381 /* Main.storyboard */; };
+		1DC5AE9921BB2E1900B20381 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DC5AE9821BB2E1900B20381 /* Assets.xcassets */; };
+		1DC5AE9C21BB2E1900B20381 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DC5AE9A21BB2E1900B20381 /* LaunchScreen.storyboard */; };
+		1DC5AEA821BB3A1A00B20381 /* DJIRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5AEA721BB3A1A00B20381 /* DJIRootViewController.swift */; };
+		1DC5AEAA21BC588200B20381 /* DJIMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5AEA921BC588200B20381 /* DJIMapController.swift */; };
+		1DC5AEAD21BF0FCD00B20381 /* DJIAircraftAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5AEAC21BF0FCD00B20381 /* DJIAircraftAnnotationView.swift */; };
+		1DC5AEAF21BF172C00B20381 /* DJIAircraftAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5AEAE21BF172C00B20381 /* DJIAircraftAnnotation.swift */; };
+		1DC5AEB121C032FD00B20381 /* DemoUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5AEB021C032FD00B20381 /* DemoUtility.swift */; };
+		1DC5AEB321C07FD700B20381 /* DJIComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5AEB221C07FD700B20381 /* DJIComponent.swift */; };
+		1DC5AEC321C1775900B20381 /* ProductCommunicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5AEC221C1775900B20381 /* ProductCommunicationManager.swift */; };
+		D4159597260113CC7B7D5959 /* Pods_Waypoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B0265E8F3C6605EC6101053 /* Pods_Waypoint.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1DC5AE8E21BB2E1800B20381 /* Waypoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Waypoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DC5AE9121BB2E1800B20381 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1DC5AE9321BB2E1800B20381 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1DC5AE9621BB2E1800B20381 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1DC5AE9821BB2E1900B20381 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1DC5AE9B21BB2E1900B20381 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1DC5AE9D21BB2E1900B20381 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DC5AEA721BB3A1A00B20381 /* DJIRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJIRootViewController.swift; sourceTree = "<group>"; };
+		1DC5AEA921BC588200B20381 /* DJIMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJIMapController.swift; sourceTree = "<group>"; };
+		1DC5AEAC21BF0FCD00B20381 /* DJIAircraftAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJIAircraftAnnotationView.swift; sourceTree = "<group>"; };
+		1DC5AEAE21BF172C00B20381 /* DJIAircraftAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJIAircraftAnnotation.swift; sourceTree = "<group>"; };
+		1DC5AEB021C032FD00B20381 /* DemoUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUtility.swift; sourceTree = "<group>"; };
+		1DC5AEB221C07FD700B20381 /* DJIComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJIComponent.swift; sourceTree = "<group>"; };
+		1DC5AEC221C1775900B20381 /* ProductCommunicationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCommunicationManager.swift; sourceTree = "<group>"; };
+		3B0265E8F3C6605EC6101053 /* Pods_Waypoint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Waypoint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B5DE5BA36FBB4B93788AFDF /* Pods-Waypoint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Waypoint.release.xcconfig"; path = "Pods/Target Support Files/Pods-Waypoint/Pods-Waypoint.release.xcconfig"; sourceTree = "<group>"; };
+		752D75D3A05A26BBFD9ED163 /* Pods-Waypoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Waypoint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Waypoint/Pods-Waypoint.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1DC5AE8B21BB2E1800B20381 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4159597260113CC7B7D5959 /* Pods_Waypoint.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1DC5AE8521BB2E1800B20381 = {
+			isa = PBXGroup;
+			children = (
+				1DC5AE9021BB2E1800B20381 /* Waypoint */,
+				1DC5AE8F21BB2E1800B20381 /* Products */,
+				6FEA9F4443469B2BCBF66418 /* Pods */,
+				83C26B86444AA3A14F188377 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1DC5AE8F21BB2E1800B20381 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1DC5AE8E21BB2E1800B20381 /* Waypoint.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1DC5AE9021BB2E1800B20381 /* Waypoint */ = {
+			isa = PBXGroup;
+			children = (
+				1DC5AE9121BB2E1800B20381 /* AppDelegate.swift */,
+				1DC5AE9321BB2E1800B20381 /* ViewController.swift */,
+				1DC5AE9521BB2E1800B20381 /* Main.storyboard */,
+				1DC5AE9821BB2E1900B20381 /* Assets.xcassets */,
+				1DC5AE9A21BB2E1900B20381 /* LaunchScreen.storyboard */,
+				1DC5AE9D21BB2E1900B20381 /* Info.plist */,
+				1DC5AEA721BB3A1A00B20381 /* DJIRootViewController.swift */,
+				1DC5AEA921BC588200B20381 /* DJIMapController.swift */,
+				1DC5AEAC21BF0FCD00B20381 /* DJIAircraftAnnotationView.swift */,
+				1DC5AEAE21BF172C00B20381 /* DJIAircraftAnnotation.swift */,
+				1DC5AEB021C032FD00B20381 /* DemoUtility.swift */,
+				1DC5AEB221C07FD700B20381 /* DJIComponent.swift */,
+				1DC5AEC221C1775900B20381 /* ProductCommunicationManager.swift */,
+			);
+			path = Waypoint;
+			sourceTree = "<group>";
+		};
+		6FEA9F4443469B2BCBF66418 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				752D75D3A05A26BBFD9ED163 /* Pods-Waypoint.debug.xcconfig */,
+				5B5DE5BA36FBB4B93788AFDF /* Pods-Waypoint.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		83C26B86444AA3A14F188377 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B0265E8F3C6605EC6101053 /* Pods_Waypoint.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1DC5AE8D21BB2E1800B20381 /* Waypoint */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DC5AEA021BB2E1900B20381 /* Build configuration list for PBXNativeTarget "Waypoint" */;
+			buildPhases = (
+				0C5D59B272022064A77FCB51 /* [CP] Check Pods Manifest.lock */,
+				1DC5AE8A21BB2E1800B20381 /* Sources */,
+				1DC5AE8B21BB2E1800B20381 /* Frameworks */,
+				1DC5AE8C21BB2E1800B20381 /* Resources */,
+				16396F078C4A2EE97C8D7D32 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Waypoint;
+			productName = Waypoint;
+			productReference = 1DC5AE8E21BB2E1800B20381 /* Waypoint.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1DC5AE8621BB2E1800B20381 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Charles Fiedler";
+				TargetAttributes = {
+					1DC5AE8D21BB2E1800B20381 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 1DC5AE8921BB2E1800B20381 /* Build configuration list for PBXProject "Waypoint" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1DC5AE8521BB2E1800B20381;
+			productRefGroup = 1DC5AE8F21BB2E1800B20381 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1DC5AE8D21BB2E1800B20381 /* Waypoint */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1DC5AE8C21BB2E1800B20381 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DC5AE9C21BB2E1900B20381 /* LaunchScreen.storyboard in Resources */,
+				1DC5AE9921BB2E1900B20381 /* Assets.xcassets in Resources */,
+				1DC5AE9721BB2E1800B20381 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C5D59B272022064A77FCB51 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Waypoint-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		16396F078C4A2EE97C8D7D32 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Waypoint/Pods-Waypoint-frameworks.sh",
+				"${PODS_ROOT}/DJI-SDK-iOS/iOS_Mobile_SDK/DJISDK.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DJISDK.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Waypoint/Pods-Waypoint-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1DC5AE8A21BB2E1800B20381 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DC5AEA821BB3A1A00B20381 /* DJIRootViewController.swift in Sources */,
+				1DC5AE9421BB2E1800B20381 /* ViewController.swift in Sources */,
+				1DC5AEB121C032FD00B20381 /* DemoUtility.swift in Sources */,
+				1DC5AEAF21BF172C00B20381 /* DJIAircraftAnnotation.swift in Sources */,
+				1DC5AEAA21BC588200B20381 /* DJIMapController.swift in Sources */,
+				1DC5AEAD21BF0FCD00B20381 /* DJIAircraftAnnotationView.swift in Sources */,
+				1DC5AEC321C1775900B20381 /* ProductCommunicationManager.swift in Sources */,
+				1DC5AE9221BB2E1800B20381 /* AppDelegate.swift in Sources */,
+				1DC5AEB321C07FD700B20381 /* DJIComponent.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1DC5AE9521BB2E1800B20381 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DC5AE9621BB2E1800B20381 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1DC5AE9A21BB2E1900B20381 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DC5AE9B21BB2E1900B20381 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DC5AE9E21BB2E1900B20381 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1DC5AE9F21BB2E1900B20381 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1DC5AEA121BB2E1900B20381 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 752D75D3A05A26BBFD9ED163 /* Pods-Waypoint.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62W5236K33;
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = "$(PODS_ROOT)/Headers/Public";
+				INFOPLIST_FILE = Waypoint/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MKDIR.Waypoint;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1DC5AEA221BB2E1900B20381 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B5DE5BA36FBB4B93788AFDF /* Pods-Waypoint.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62W5236K33;
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = "$(PODS_ROOT)/Headers/Public";
+				INFOPLIST_FILE = Waypoint/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MKDIR.Waypoint;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DC5AE8921BB2E1800B20381 /* Build configuration list for PBXProject "Waypoint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DC5AE9E21BB2E1900B20381 /* Debug */,
+				1DC5AE9F21BB2E1900B20381 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DC5AEA021BB2E1900B20381 /* Build configuration list for PBXNativeTarget "Waypoint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DC5AEA121BB2E1900B20381 /* Debug */,
+				1DC5AEA221BB2E1900B20381 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1DC5AE8621BB2E1800B20381 /* Project object */;
+}
