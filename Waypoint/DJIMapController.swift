@@ -48,6 +48,8 @@ public class DJIMapController: NSObject {
             mapView.addAnnotation(self.aircraftAnnotation)
         }
         self.aircraftAnnotation.setCoordinate(newCoordinate: location)
+        mapView.removeAnnotation(self.aircraftAnnotation)
+        mapView.addAnnotation(self.aircraftAnnotation)
     }
 
     //update aircraft's heading in mapView

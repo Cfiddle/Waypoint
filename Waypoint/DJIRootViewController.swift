@@ -11,48 +11,55 @@ import DJISDK
 import MapKit
 import GLKit
 
-public class DJIRootViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, DJISDKManagerDelegate, DJIFlightControllerDelegate {
+class DJIRootViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, DJISDKManagerDelegate, DJIFlightControllerDelegate, DJIGSButtonControllerDelegate {
+
+    let enableBridgeMode = false
+    let bridgeAppIP = "10.80.66.34"
     
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var editButton: UIButton!
-    @IBOutlet weak var mapFocus: UIButton!
     @IBOutlet weak var modeLabel: UILabel!
     @IBOutlet weak var gpsLabel: UILabel!
     @IBOutlet weak var hsLabel: UILabel!
     @IBOutlet weak var vsLabel: UILabel!
     @IBOutlet weak var altitudeLabel: UILabel!
+    @IBOutlet weak var topBarView: UIView!
     
     var locationManager: CLLocationManager!
     var userLocation: CLLocationCoordinate2D!
-    var droneLocation = CLLocationCoordinate2D(latitude: CLLocationDegrees(exactly: 45.523123)!, longitude: CLLocationDegrees(exactly: -122.670421)!)
-    var isEditingPoints = true
+    var droneLocation: CLLocationCoordinate2D!
+    var isEditingPoints = false
+    var gsButtonVC: DJIGSButtonController!
     var tapGesture = UITapGestureRecognizer()
     var mapController = DJIMapController()
     var flightController: DJIFlightController?
-
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.registerApp()
         self.initUI()
         self.initData()
+        print("luce test")
     }
-
+    
     //DJISDKManagerDelegate methods
     func registerApp() {
         DJISDKManager.registerApp(with: self)
     }
     
-    public func appRegisteredWithError(_ error: Error?) {
+    func appRegisteredWithError(_ error: Error?) {
+        NSLog("luce SDK Registered with error \(String(describing: error?.localizedDescription))")
+        
         var message = "App Registered Successfully!"
         if error != nil {
             message = "App Failed to Register! Please enter your App Key in the plist file and check the network."
         } else {
-            print("HasRegistered: \(DJISDKManager.hasSDKRegistered())")
-            if DJISDKManager.startConnectionToProduct() {
-                print("Sucessfully connected to product")
+            
+            if enableBridgeMode {
+                NSLog("luce bridge")
+                DJISDKManager.enableBridgeMode(withBridgeAppIP: bridgeAppIP)
             } else {
-                print("Failed to connect to product")
+                DJISDKManager.startConnectionToProduct()
             }
         }
         showAlertWithTitle(title: "Register App", message: message)
@@ -63,8 +70,8 @@ public class DJIRootViewController: UIViewController, MKMapViewDelegate, CLLocat
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
-
-    private func componentConnected(withKey key: String?, andIndex index: Int) {
+    
+    func componentConnected(withKey key: String?, andIndex index: Int) {
         guard
             let componentName = key,
             let component = DJIComponent(rawValue: componentName),
@@ -85,8 +92,11 @@ public class DJIRootViewController: UIViewController, MKMapViewDelegate, CLLocat
         }
     }
     
-    private func productConnected(_ product: DJIBaseProduct?) {
+    func productConnected(_ product: DJIBaseProduct?) {
+        NSLog("luce productConnected")
         if product != nil {
+            self.modeLabel.text = "\((DJISDKManager.product()?.model)!)"  //luce
+            
             let flightController: DJIFlightController? = DemoUtility.fetchFlightController()
             if flightController != nil {
                 flightController!.delegate = self
@@ -97,9 +107,10 @@ public class DJIRootViewController: UIViewController, MKMapViewDelegate, CLLocat
     }
     
     //DJIFlightControllerDelegate methods
-    private func flightController(_ fc: DJIFlightController, didUpdate state: DJIFlightControllerState) {
-        self.droneLocation = (state.aircraftLocation?.coordinate)!
-        
+    func flightController(_ fc: DJIFlightController, didUpdate state: DJIFlightControllerState) {
+        if let location = state.aircraftLocation {
+            self.droneLocation = location.coordinate
+        }
         self.modeLabel.text = state.flightModeString
         self.gpsLabel.text = "\(state.satelliteCount)"
         self.vsLabel.text = "\(state.velocityZ)"
@@ -115,12 +126,12 @@ public class DJIRootViewController: UIViewController, MKMapViewDelegate, CLLocat
         super.viewWillAppear(animated)
         self.startUpdateLocation()
     }
-
+    
     public override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.locationManager.stopUpdatingLocation()
     }
-
+    
     func initUI() {
         self.modeLabel.text = "N/A"
         self.gpsLabel.text = "N/A"
@@ -128,12 +139,12 @@ public class DJIRootViewController: UIViewController, MKMapViewDelegate, CLLocat
         self.hsLabel.text = "\(0.0)"
         self.altitudeLabel.text = "\(0.0)"
         
-        editButton.layer.masksToBounds = true
-        editButton.layer.cornerRadius = 10
-        mapFocus.layer.masksToBounds = true
-        mapFocus.layer.cornerRadius = 10
+        self.gsButtonVC = DJIGSButtonController()
+        gsButtonVC.view.frame = CGRect(x: 25, y: topBarView.frame.origin.y + topBarView.frame.size.height + 50, width: gsButtonVC.view.frame.size.width, height: gsButtonVC.view.frame.size.height)
+        gsButtonVC.delegate = self
+        view.addSubview(gsButtonVC.view)
     }
-
+    
     func initData() {
         self.userLocation = kCLLocationCoordinate2DInvalid
         self.droneLocation = kCLLocationCoordinate2DInvalid
@@ -141,30 +152,33 @@ public class DJIRootViewController: UIViewController, MKMapViewDelegate, CLLocat
         self.tapGesture = UITapGestureRecognizer(target: self, action: #selector(addWaypoints))
         self.mapView.addGestureRecognizer(self.tapGesture)
     }
+    
+    func focusMapViewOnUser() {
+        if CLLocationCoordinate2DIsValid((self.locationManager.location?.coordinate)!) {
+            self.userLocation = self.locationManager.location?.coordinate
+            let region = MKCoordinateRegion(center: self.userLocation, latitudinalMeters: 1000, longitudinalMeters: 1000)
+            self.mapView.setRegion(region, animated: true)
+        }
+    }
 
-    @IBAction func focusMapView(sender: UIButton) {
-//        if CLLocationCoordinate2DIsValid((self.locationManager.location?.coordinate)!) {
-//            self.userLocation = self.locationManager.location?.coordinate
-//            let region = MKCoordinateRegion(center: self.userLocation, latitudinalMeters: 1000, longitudinalMeters: 1000)
-//            self.mapView.setRegion(region, animated: true)
-//        }
+    func focusMapViewOnDrone() {
         if CLLocationCoordinate2DIsValid(self.droneLocation) {
             let region = MKCoordinateRegion(center: self.droneLocation, latitudinalMeters: 1000, longitudinalMeters: 1000)
             self.mapView.setRegion(region, animated: true)
         }
     }
 
-    @IBAction func editButtonAction(sender: UIButton) {
-        if self.isEditingPoints && !self.mapView.annotations.isEmpty {
-            self.mapController.clearAllWaypointsFrom(mapView: self.mapView)
-            self.editButton.setTitle("Edit", for: UIControl.State.normal)
-            self.isEditingPoints = false
-        } else {
-            self.editButton.setTitle("Reset", for: UIControl.State.normal)
-            self.isEditingPoints = true
-        }
-    }
-
+//    @IBAction func editButtonAction(sender: UIButton) {
+//        if self.isEditingPoints && !self.mapView.annotations.isEmpty {
+//            self.mapController.clearAllWaypointsFrom(mapView: self.mapView)
+//            self.editButton.setTitle("Edit", for: UIControl.State.normal)
+//            self.isEditingPoints = false
+//        } else {
+//            self.editButton.setTitle("Reset", for: UIControl.State.normal)
+//            self.isEditingPoints = true
+//        }
+//    }
+    
     @objc func addWaypoints(tapGesture: UITapGestureRecognizer) {
         let point = tapGesture.location(in: mapView)
         if tapGesture.state == UIGestureRecognizer.State.ended {
@@ -173,7 +187,49 @@ public class DJIRootViewController: UIViewController, MKMapViewDelegate, CLLocat
             }
         }
     }
-
+    
+    //DJIGSButtonController actions
+    func stopButtonAction(inGSButtonVC GSBtnVC: DJIGSButtonController?) {
+        print("StopButton")
+    }
+    
+    func clearButtonAction(inGSButtonVC GSBtnVC: DJIGSButtonController?) {
+        print("ClearButton")
+        self.mapController.clearAllWaypointsFrom(mapView: self.mapView)
+    }
+    
+    func focusMapButtonAction(inGSButtonVC GSBtnVC: DJIGSButtonController?) {
+        print("FocusButton")
+        self.focusMapViewOnDrone()
+    }
+    
+    func startButtonAction(inGSButtonVC GSBtnVC: DJIGSButtonController?) {
+        print("StartButton")
+    }
+    
+    func addButton(_ button: UIButton?, withActionInGSButtonVC GSBtnVC: DJIGSButtonController?) {
+        print("AddButton")
+        if self.isEditingPoints {
+            button?.setTitle("Add", for: UIControl.State.normal)
+            self.isEditingPoints = false
+        } else {
+            button?.setTitle("Finished", for: UIControl.State.normal)
+            self.isEditingPoints = true
+        }
+    }
+    
+    func configButtonAction(inGSButtonVC GSBtnVC: DJIGSButtonController?) {
+        print("ConfigButton")
+    }
+    
+    func switchTo(mode: DJIGSViewMode, inGSButtonVC GSBtnVC: DJIGSButtonController?) {
+        print("SwitchButton")
+        if (mode == DJIGSViewMode.EditMode) {
+            self.focusMapViewOnDrone()
+        }
+    }
+    
+    
     public func startUpdateLocation() {
         if CLLocationManager.locationServicesEnabled() {
             if self.locationManager == nil {
@@ -192,10 +248,10 @@ public class DJIRootViewController: UIViewController, MKMapViewDelegate, CLLocat
             self.present(alert, animated: true, completion: nil)
         }
     }
-
-
+    
+    
     //MapViewDelegate methods
-    private func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if annotation.isKind(of: MKPointAnnotation.self) {
             let pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "Pin_Annotation")
             pinView.pinTintColor = UIColor.purple
@@ -203,6 +259,8 @@ public class DJIRootViewController: UIViewController, MKMapViewDelegate, CLLocat
         } else if annotation.isKind(of: DJIAircraftAnnotation.self) {
             let aircraftView = DJIAircraftAnnotationView(annotation: annotation, reuseIdentifier: "Aircraft_Annotation")
             return aircraftView
+        } else {
+            print("Fuck!")
         }
         return nil
     }

@@ -19,6 +19,8 @@
 		1DC5AF2821C2E05A00B20381 /* DJIComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5AF2221C2E05A00B20381 /* DJIComponent.swift */; };
 		1DC5AF2921C2E05A00B20381 /* DJIAircraftAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5AF2321C2E05A00B20381 /* DJIAircraftAnnotation.swift */; };
 		1DC5AF2B21C2E06500B20381 /* ProductCommunicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5AF2A21C2E06500B20381 /* ProductCommunicationManager.swift */; };
+		1DC5AF2F21C8381000B20381 /* DJIGSButtonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5AF2E21C8381000B20381 /* DJIGSButtonController.swift */; };
+		1DC5AF3121C8385C00B20381 /* DJIGSButtonController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DC5AF3021C8385C00B20381 /* DJIGSButtonController.xib */; };
 		51B687A8ACA843DB64963811 /* Pods_Waypoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB11F0531A94B8FA314A00DB /* Pods_Waypoint.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		1DC5AF2221C2E05A00B20381 /* DJIComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJIComponent.swift; sourceTree = "<group>"; };
 		1DC5AF2321C2E05A00B20381 /* DJIAircraftAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DJIAircraftAnnotation.swift; sourceTree = "<group>"; };
 		1DC5AF2A21C2E06500B20381 /* ProductCommunicationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCommunicationManager.swift; sourceTree = "<group>"; };
+		1DC5AF2E21C8381000B20381 /* DJIGSButtonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJIGSButtonController.swift; sourceTree = "<group>"; };
+		1DC5AF3021C8385C00B20381 /* DJIGSButtonController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DJIGSButtonController.xib; sourceTree = "<group>"; };
 		2D8CA1217BFD2CF59C106547 /* Pods-Waypoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Waypoint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Waypoint/Pods-Waypoint.debug.xcconfig"; sourceTree = "<group>"; };
 		4BC31FDB37B87B7294A65DA5 /* Pods-Waypoint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Waypoint.release.xcconfig"; path = "Pods/Target Support Files/Pods-Waypoint/Pods-Waypoint.release.xcconfig"; sourceTree = "<group>"; };
 		FB11F0531A94B8FA314A00DB /* Pods_Waypoint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Waypoint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +58,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D7E7E8D21C85F9E00A7D6EB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1DC5AF0C21C2DF5200B20381 /* AppDelegate.swift */,
+				1DC5AF1321C2DF5200B20381 /* Assets.xcassets */,
+				1DC5AF1821C2DF5200B20381 /* Info.plist */,
+				1DC5AF1521C2DF5200B20381 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1D7E7E8E21C85FCC00A7D6EB /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				1DC5AF2321C2E05A00B20381 /* DJIAircraftAnnotation.swift */,
+				1DC5AF1E21C2E05900B20381 /* DJIAircraftAnnotationView.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		1DC5AF0021C2DF5200B20381 = {
 			isa = PBXGroup;
 			children = (
@@ -75,19 +99,17 @@
 		1DC5AF0B21C2DF5200B20381 /* Waypoint */ = {
 			isa = PBXGroup;
 			children = (
-				1DC5AF0C21C2DF5200B20381 /* AppDelegate.swift */,
+				1D7E7E8E21C85FCC00A7D6EB /* Map */,
+				1D7E7E8D21C85F9E00A7D6EB /* Resources */,
 				1DC5AF0E21C2DF5200B20381 /* ViewController.swift */,
 				1DC5AF1F21C2E05900B20381 /* DemoUtility.swift */,
-				1DC5AF2321C2E05A00B20381 /* DJIAircraftAnnotation.swift */,
-				1DC5AF1E21C2E05900B20381 /* DJIAircraftAnnotationView.swift */,
 				1DC5AF2221C2E05A00B20381 /* DJIComponent.swift */,
 				1DC5AF2021C2E05900B20381 /* DJIMapController.swift */,
 				1DC5AF2121C2E05900B20381 /* DJIRootViewController.swift */,
 				1DC5AF2A21C2E06500B20381 /* ProductCommunicationManager.swift */,
 				1DC5AF1021C2DF5200B20381 /* Main.storyboard */,
-				1DC5AF1321C2DF5200B20381 /* Assets.xcassets */,
-				1DC5AF1521C2DF5200B20381 /* LaunchScreen.storyboard */,
-				1DC5AF1821C2DF5200B20381 /* Info.plist */,
+				1DC5AF2E21C8381000B20381 /* DJIGSButtonController.swift */,
+				1DC5AF3021C8385C00B20381 /* DJIGSButtonController.xib */,
 			);
 			path = Waypoint;
 			sourceTree = "<group>";
@@ -172,6 +194,7 @@
 				1DC5AF1721C2DF5200B20381 /* LaunchScreen.storyboard in Resources */,
 				1DC5AF1421C2DF5200B20381 /* Assets.xcassets in Resources */,
 				1DC5AF1221C2DF5200B20381 /* Main.storyboard in Resources */,
+				1DC5AF3121C8385C00B20381 /* DJIGSButtonController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +255,7 @@
 				1DC5AF2721C2E05A00B20381 /* DJIRootViewController.swift in Sources */,
 				1DC5AF0F21C2DF5200B20381 /* ViewController.swift in Sources */,
 				1DC5AF2521C2E05A00B20381 /* DemoUtility.swift in Sources */,
+				1DC5AF2F21C8381000B20381 /* DJIGSButtonController.swift in Sources */,
 				1DC5AF0D21C2DF5200B20381 /* AppDelegate.swift in Sources */,
 				1DC5AF2921C2E05A00B20381 /* DJIAircraftAnnotation.swift in Sources */,
 				1DC5AF2621C2E05A00B20381 /* DJIMapController.swift in Sources */,
