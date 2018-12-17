@@ -11,6 +11,8 @@ import DJISDK
 import MapKit
 import GLKit
 
+//We're using the demo tutorial at https://developer.dji.com/mobile-sdk/documentation/ios-tutorials/GSDemo.html
+
 class DJIRootViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, DJISDKManagerDelegate, DJIFlightControllerDelegate, DJIGSButtonControllerDelegate {
 
     let enableBridgeMode = false
