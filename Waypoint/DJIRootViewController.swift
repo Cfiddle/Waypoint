@@ -13,7 +13,7 @@ import GLKit
 
 //We're using the demo tutorial at https://developer.dji.com/mobile-sdk/documentation/ios-tutorials/GSDemo.html
 
-class DJIRootViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, DJISDKManagerDelegate, DJIFlightControllerDelegate, DJIGSButtonControllerDelegate {
+class DJIRootViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, DJISDKManagerDelegate, DJIFlightControllerDelegate, DJIGSButtonControllerDelegate, DJIWaypointConfigViewControllerDelegate {
 
     let enableBridgeMode = false
     let bridgeAppIP = "10.80.66.34"
@@ -31,9 +31,11 @@ class DJIRootViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     var droneLocation: CLLocationCoordinate2D!
     var isEditingPoints = false
     var gsButtonVC: DJIGSButtonController!
+    var waypointConfigVC: DJIWaypointConfigViewController!
     var tapGesture = UITapGestureRecognizer()
     var mapController = DJIMapController()
     var flightController: DJIFlightController?
+    var waypointMission: DJIMutableWaypointMission!
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -145,6 +147,18 @@ class DJIRootViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         gsButtonVC.view.frame = CGRect(x: 25, y: topBarView.frame.origin.y + topBarView.frame.size.height + 50, width: gsButtonVC.view.frame.size.width, height: gsButtonVC.view.frame.size.height)
         gsButtonVC.delegate = self
         view.addSubview(gsButtonVC.view)
+        
+        self.waypointConfigVC = DJIWaypointConfigViewController()
+        let centerX = self.view.frame.width/2
+        let centerY = self.view.frame.height/2
+        let width = waypointConfigVC.view.frame.size.width
+        let height = waypointConfigVC.view.frame.size.height
+        let x = centerX - (width/2)
+        let y = centerY - (height/2)
+        waypointConfigVC.view.frame = CGRect(x: x, y: y, width: width, height: height)
+        waypointConfigVC.delegate = self
+        waypointConfigVC.view.alpha = 0
+        self.view.addSubview(waypointConfigVC.view)
     }
     
     func initData() {
@@ -169,17 +183,6 @@ class DJIRootViewController: UIViewController, MKMapViewDelegate, CLLocationMana
             self.mapView.setRegion(region, animated: true)
         }
     }
-
-//    @IBAction func editButtonAction(sender: UIButton) {
-//        if self.isEditingPoints && !self.mapView.annotations.isEmpty {
-//            self.mapController.clearAllWaypointsFrom(mapView: self.mapView)
-//            self.editButton.setTitle("Edit", for: UIControl.State.normal)
-//            self.isEditingPoints = false
-//        } else {
-//            self.editButton.setTitle("Reset", for: UIControl.State.normal)
-//            self.isEditingPoints = true
-//        }
-//    }
     
     @objc func addWaypoints(tapGesture: UITapGestureRecognizer) {
         let point = tapGesture.location(in: mapView)
@@ -222,6 +225,26 @@ class DJIRootViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     
     func configButtonAction(inGSButtonVC GSBtnVC: DJIGSButtonController?) {
         print("ConfigButton")
+        let waypoints = self.mapController.waypoints
+        if waypoints.isEmpty || waypoints.count < 2 {
+            let message = "Please add more waypoints to the map."
+            showAlertWithTitle(title: "Not enough waypoints", message: message)
+        } else {
+            UIView.animate(withDuration: 0.25, animations: {
+                self.waypointConfigVC.view.alpha = 1
+                })
+            if self.waypointMission != nil {
+                self.waypointMission.removeAllWaypoints()
+            } else {
+                self.waypointMission = DJIMutableWaypointMission()
+            }
+            for coord in waypoints {
+                if CLLocationCoordinate2DIsValid(coord.coordinate) {
+                    let waypoint = DJIWaypoint(coordinate: coord.coordinate)
+                    waypointMission.add(waypoint)
+                }
+            }
+        }
     }
     
     func switchTo(mode: DJIGSViewMode, inGSButtonVC GSBtnVC: DJIGSButtonController?) {
@@ -230,8 +253,19 @@ class DJIRootViewController: UIViewController, MKMapViewDelegate, CLLocationMana
             self.focusMapViewOnDrone()
         }
     }
-    
-    
+
+    func cancelBtnAction(in waypointConfigVC: DJIWaypointConfigViewController?) {
+        UIView.animate(withDuration: 0.25, animations: {
+            self.waypointConfigVC.view.alpha = 0
+        })
+    }
+
+    func finishBtnAction(in waypointConfigVC: DJIWaypointConfigViewController?) {
+        UIView.animate(withDuration: 0.25, animations: {
+            self.waypointConfigVC.view.alpha = 0
+        })
+    }
+
     public func startUpdateLocation() {
         if CLLocationManager.locationServicesEnabled() {
             if self.locationManager == nil {

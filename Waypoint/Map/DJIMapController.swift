@@ -11,7 +11,7 @@ import MapKit
 
 public class DJIMapController: NSObject {
 
-    public var editPoints: [CLLocation] = []
+    public var waypoints: [CLLocation] = []
     public var aircraftAnnotation: DJIAircraftAnnotation!
 
     override init() {
@@ -22,7 +22,7 @@ public class DJIMapController: NSObject {
     func addPoint(point: CGPoint, to mapView: MKMapView) {
         let coord = mapView.convert(point, toCoordinateFrom: mapView)
         let location = CLLocation(latitude: coord.latitude, longitude: coord.longitude)
-        editPoints.append(location)
+        waypoints.append(location)
         let annotation = MKPointAnnotation()
         annotation.coordinate = location.coordinate
         mapView.addAnnotation(annotation)
@@ -30,7 +30,7 @@ public class DJIMapController: NSObject {
 
     //remove all waypoint from the map
     func clearAllWaypointsFrom(mapView: MKMapView) {
-        editPoints.removeAll()
+        waypoints.removeAll()
         for annotation in mapView.annotations {
             if !annotation.isKind(of: DJIAircraftAnnotation.self) {
                 mapView.removeAnnotation(annotation)

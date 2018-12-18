@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D7E7E9321C9570100A7D6EB /* DJIWaypointConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D7E7E9221C9570100A7D6EB /* DJIWaypointConfigViewController.xib */; };
+		1D7E7E9521C9767B00A7D6EB /* DJIWaypointConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7E7E9421C9767B00A7D6EB /* DJIWaypointConfigViewController.swift */; };
 		1DC5AF0D21C2DF5200B20381 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5AF0C21C2DF5200B20381 /* AppDelegate.swift */; };
 		1DC5AF0F21C2DF5200B20381 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5AF0E21C2DF5200B20381 /* ViewController.swift */; };
 		1DC5AF1221C2DF5200B20381 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DC5AF1021C2DF5200B20381 /* Main.storyboard */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D7E7E9221C9570100A7D6EB /* DJIWaypointConfigViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DJIWaypointConfigViewController.xib; sourceTree = "<group>"; };
+		1D7E7E9421C9767B00A7D6EB /* DJIWaypointConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DJIWaypointConfigViewController.swift; sourceTree = "<group>"; };
 		1DC5AF0921C2DF5200B20381 /* Waypoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Waypoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DC5AF0C21C2DF5200B20381 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DC5AF0E21C2DF5200B20381 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,8 +66,8 @@
 			isa = PBXGroup;
 			children = (
 				1DC5AF0C21C2DF5200B20381 /* AppDelegate.swift */,
+				1DC5AF1F21C2E05900B20381 /* DemoUtility.swift */,
 				1DC5AF1321C2DF5200B20381 /* Assets.xcassets */,
-				1DC5AF1821C2DF5200B20381 /* Info.plist */,
 				1DC5AF1521C2DF5200B20381 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
@@ -74,8 +78,20 @@
 			children = (
 				1DC5AF2321C2E05A00B20381 /* DJIAircraftAnnotation.swift */,
 				1DC5AF1E21C2E05900B20381 /* DJIAircraftAnnotationView.swift */,
+				1DC5AF2021C2E05900B20381 /* DJIMapController.swift */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		1D7E7E8F21C9564600A7D6EB /* UIInteraction */ = {
+			isa = PBXGroup;
+			children = (
+				1DC5AF2E21C8381000B20381 /* DJIGSButtonController.swift */,
+				1DC5AF3021C8385C00B20381 /* DJIGSButtonController.xib */,
+				1D7E7E9421C9767B00A7D6EB /* DJIWaypointConfigViewController.swift */,
+				1D7E7E9221C9570100A7D6EB /* DJIWaypointConfigViewController.xib */,
+			);
+			path = UIInteraction;
 			sourceTree = "<group>";
 		};
 		1DC5AF0021C2DF5200B20381 = {
@@ -99,17 +115,15 @@
 		1DC5AF0B21C2DF5200B20381 /* Waypoint */ = {
 			isa = PBXGroup;
 			children = (
+				1D7E7E8F21C9564600A7D6EB /* UIInteraction */,
 				1D7E7E8E21C85FCC00A7D6EB /* Map */,
 				1D7E7E8D21C85F9E00A7D6EB /* Resources */,
+				1DC5AF1821C2DF5200B20381 /* Info.plist */,
 				1DC5AF0E21C2DF5200B20381 /* ViewController.swift */,
-				1DC5AF1F21C2E05900B20381 /* DemoUtility.swift */,
 				1DC5AF2221C2E05A00B20381 /* DJIComponent.swift */,
-				1DC5AF2021C2E05900B20381 /* DJIMapController.swift */,
 				1DC5AF2121C2E05900B20381 /* DJIRootViewController.swift */,
 				1DC5AF2A21C2E06500B20381 /* ProductCommunicationManager.swift */,
 				1DC5AF1021C2DF5200B20381 /* Main.storyboard */,
-				1DC5AF2E21C8381000B20381 /* DJIGSButtonController.swift */,
-				1DC5AF3021C8385C00B20381 /* DJIGSButtonController.xib */,
 			);
 			path = Waypoint;
 			sourceTree = "<group>";
@@ -192,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DC5AF1721C2DF5200B20381 /* LaunchScreen.storyboard in Resources */,
+				1D7E7E9321C9570100A7D6EB /* DJIWaypointConfigViewController.xib in Resources */,
 				1DC5AF1421C2DF5200B20381 /* Assets.xcassets in Resources */,
 				1DC5AF1221C2DF5200B20381 /* Main.storyboard in Resources */,
 				1DC5AF3121C8385C00B20381 /* DJIGSButtonController.xib in Resources */,
@@ -260,6 +275,7 @@
 				1DC5AF2921C2E05A00B20381 /* DJIAircraftAnnotation.swift in Sources */,
 				1DC5AF2621C2E05A00B20381 /* DJIMapController.swift in Sources */,
 				1DC5AF2B21C2E06500B20381 /* ProductCommunicationManager.swift in Sources */,
+				1D7E7E9521C9767B00A7D6EB /* DJIWaypointConfigViewController.swift in Sources */,
 				1DC5AF2821C2E05A00B20381 /* DJIComponent.swift in Sources */,
 				1DC5AF2421C2E05A00B20381 /* DJIAircraftAnnotationView.swift in Sources */,
 			);
