@@ -290,7 +290,7 @@ typedef NS_ENUM(NSInteger, DJIMissionControlError) {
     
 
     /**
-     *  Can't stop a timeline which is not running.
+     *  Can't resume a timeline which is not paused.
      */
     DJIMissionControlTimelineStopErrorNotRunning = 10011,
         

@@ -36,17 +36,14 @@ EXTERN_KEY NSString *const DJICameraParamPhotoFileFormat;
 EXTERN_KEY NSString *const DJICameraParamPhotoBurstCount;
 EXTERN_KEY NSString *const DJICameraParamPhotoRAWBurstCount;
 EXTERN_KEY NSString *const DJICameraParamPhotoAEBCount;
-EXTERN_KEY NSString *const DJICameraParamCurrentPanoramaPhotoCount;
 EXTERN_KEY NSString *const DJICameraParamPhotoTimeIntervalSettings;
 EXTERN_KEY NSString *const DJICameraParamPhotoTimeLapseSettings;
-EXTERN_KEY NSString *const DJICameraParamPhotoPanoramaMode;
 EXTERN_KEY NSString *const DJICameraParamPhotoQuickViewDuration;
 EXTERN_KEY NSString *const DJICameraParamIsShootingSinglePhoto;
 EXTERN_KEY NSString *const DJICameraParamIsShootingSinglePhotoInRAWFormat;
 EXTERN_KEY NSString *const DJICameraParamIsShootingIntervalPhoto;
 EXTERN_KEY NSString *const DJICameraParamIsShootingBurstPhoto;
 EXTERN_KEY NSString *const DJICameraParamIsShootingRAWBurstPhoto;
-EXTERN_KEY NSString *const DJICameraParamIsShootingPanoramaPhoto;
 EXTERN_KEY NSString *const DJICameraParamIsStoringPhoto;
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -68,7 +65,6 @@ EXTERN_KEY NSString *const DJICameraParamCurrentRecordingTimeInSeconds;
 ////////////////////////////////////////////////////////////////////////////////
 EXTERN_KEY NSString *const DJICameraParamExposureSettings;
 EXTERN_KEY NSString *const DJICameraParamExposureMode;
-EXTERN_KEY NSString *const DJICameraParamExposureState;
 EXTERN_KEY NSString *const DJICameraParamISO;
 EXTERN_KEY NSString *const DJICameraParamShutterSpeed;
 EXTERN_KEY NSString *const DJICameraParamIsAdjustableApertureSupported;
@@ -105,8 +101,6 @@ EXTERN_KEY NSString *const DJICameraParamVisionStabilizationEnabled;
 EXTERN_KEY NSString *const DJICameraParamMediaFileCustomInformation;
 EXTERN_KEY NSString *const DJICameraParamPanoOriginalPhotoSettings;
 EXTERN_KEY NSString *const DJICameraParamAutoLockGimbalEnabled;
-EXTERN_KEY NSString *const DJICameraParamIsLockGimbalDuringShootPhotoSupported;
-EXTERN_KEY NSString *const DJICameraParamWatermarkSettings;
 
 ////////////////////////////////////////////////////////////////////////////////
 #pragma mark - Digital zoom
@@ -271,7 +265,6 @@ EXTERN_KEY NSString *const DJICameraParamStorageLocation;
 #pragma mark - Internal Storage
 ////////////////////////////////////////////////////////////////////////////////
 EXTERN_KEY NSString *const DJICameraParamIsInternalStorageSupported;
-EXTERN_KEY NSString *const DJICameraParamFormatStorage;
 EXTERN_KEY NSString *const DJICameraParamInternalStorageOperationState;
 EXTERN_KEY NSString *const DJICameraParamInternalStorageRemainingSpaceInMB;
 EXTERN_KEY NSString *const DJICameraParamInternalStorageAvailablePhotoCount;

@@ -186,21 +186,43 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="GvJ-7z-GdO">
                                 <rect key="frame" x="0.0" y="70" width="1024" height="698"/>
                             </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yG2-0A-RQR">
+                                <rect key="frame" x="714" y="97" width="290" height="38"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JK0-lP-NLC" customClass="DUXCameraConfigInfoWidget">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="38"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="JK0-lP-NLC" secondAttribute="bottom" id="DkP-3V-7mZ"/>
+                                    <constraint firstItem="JK0-lP-NLC" firstAttribute="leading" secondItem="yG2-0A-RQR" secondAttribute="leading" id="JdT-oh-G9D"/>
+                                    <constraint firstItem="JK0-lP-NLC" firstAttribute="top" secondItem="yG2-0A-RQR" secondAttribute="top" id="S4K-Jh-TPD"/>
+                                    <constraint firstAttribute="height" constant="38" id="dIj-xN-Ugf"/>
+                                    <constraint firstAttribute="width" constant="290" id="kWw-mn-Zy5"/>
+                                    <constraint firstAttribute="trailing" secondItem="JK0-lP-NLC" secondAttribute="trailing" id="wdo-7Z-uPI"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="GvJ-7z-GdO" firstAttribute="leading" secondItem="eOd-vK-2DE" secondAttribute="leading" id="6iO-lO-bi6"/>
                             <constraint firstItem="Mzl-c0-8Iv" firstAttribute="leading" secondItem="eOd-vK-2DE" secondAttribute="leading" id="9KA-CU-glL"/>
                             <constraint firstItem="Mzl-c0-8Iv" firstAttribute="top" secondItem="eOd-vK-2DE" secondAttribute="top" id="Axf-Xb-EGq"/>
+                            <constraint firstItem="yG2-0A-RQR" firstAttribute="trailing" secondItem="GvJ-7z-GdO" secondAttribute="trailing" constant="-20" id="J5M-Hm-YVx"/>
                             <constraint firstItem="GvJ-7z-GdO" firstAttribute="top" secondItem="Mzl-c0-8Iv" secondAttribute="bottom" id="NqE-sS-snq"/>
                             <constraint firstItem="eOd-vK-2DE" firstAttribute="trailing" secondItem="GvJ-7z-GdO" secondAttribute="trailing" id="YD3-gA-BRG"/>
                             <constraint firstItem="eOd-vK-2DE" firstAttribute="trailing" secondItem="Mzl-c0-8Iv" secondAttribute="trailing" id="lnB-X0-Htd"/>
+                            <constraint firstItem="yG2-0A-RQR" firstAttribute="leading" secondItem="GvJ-7z-GdO" secondAttribute="trailing" constant="-310" id="n9I-7u-TgI"/>
                             <constraint firstItem="eOd-vK-2DE" firstAttribute="bottom" secondItem="GvJ-7z-GdO" secondAttribute="bottom" id="pIq-Sd-Aqb"/>
+                            <constraint firstItem="GvJ-7z-GdO" firstAttribute="top" secondItem="yG2-0A-RQR" secondAttribute="bottom" constant="-65" id="za5-Qd-iIG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eOd-vK-2DE"/>
                     </view>
                     <connections>
                         <outlet property="altitudeLabel" destination="0Mc-Ah-PN1" id="6vd-1f-Ryp"/>
+                        <outlet property="duxCameraConfigInfoWidget" destination="yG2-0A-RQR" id="58a-e7-Jqn"/>
                         <outlet property="gpsLabel" destination="627-T0-M0j" id="l6n-DE-eJy"/>
                         <outlet property="hsLabel" destination="Apo-Rt-LwZ" id="I1i-OM-VCa"/>
                         <outlet property="mapView" destination="GvJ-7z-GdO" id="xm5-0a-ZUr"/>

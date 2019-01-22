@@ -8,6 +8,7 @@
 
 import Foundation
 import DJISDK
+import DJIUXSDK
 import MapKit
 import GLKit
 
@@ -25,6 +26,8 @@ class DJIRootViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     @IBOutlet weak var vsLabel: UILabel!
     @IBOutlet weak var altitudeLabel: UILabel!
     @IBOutlet weak var topBarView: UIView!
+    
+    @IBOutlet var duxCameraConfigInfoWidget: DUXCameraConfigInfoWidget!
     
     var locationManager: CLLocationManager!
     var userLocation: CLLocationCoordinate2D!
@@ -159,6 +162,9 @@ class DJIRootViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         waypointConfigVC.delegate = self
         waypointConfigVC.view.alpha = 0
         self.view.addSubview(waypointConfigVC.view)
+
+        duxCameraConfigInfoWidget.backgroundColor = UIColor.clear
+        duxCameraConfigInfoWidget.layer.borderColor = UIColor.clear.cgColor
     }
     
     func initData() {

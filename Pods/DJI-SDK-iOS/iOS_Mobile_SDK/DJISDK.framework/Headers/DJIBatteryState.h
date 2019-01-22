@@ -109,41 +109,6 @@ typedef NS_ENUM (uint8_t, DJIBatteryPairingState){
 };
 
 
-/**
- *  Provides the self-heating state for the battery. When the temperature of the
- *  battery is below a threshold, it will warm up automatically. For Mavic 2
- *  Enterprise,  the self-heating is triggered when the temperature is lower than 6
- *  Celsius degrees. When the  temperature reaches 8 Celsius degrees, the battery
- *  will start to preserve the temperature and  maintain it between 6 Celsius
- *  degrees and 8 Celsius degrees.
- */
-typedef NS_ENUM (uint8_t, DJIBatterySelfHeatingState) {
-
-    /**
-     *  The auto heating feature is idle.
-     */
-    DJIBatterySelfHeatingStateIdle,
-    
-
-    /**
-     *  The battery is warming itself up automatically.
-     */
-    DJIBatterySelfHeatingStateWarmingUp,
-    
-
-    /**
-     *  The battery is preserving its temperature. For Mavic 2 Enterprise,  the
-     *  temperature will be maintained between 6 Celsius degrees and 8 Celsius degrees.
-     */
-    DJIBatterySelfHeatingStatePreserving,
-    
-
-    /**
-     *  Unknown.
-     */
-    DJIBatterySelfHeatingStateUnknown = 0xFF
-};
-
 /*********************************************************************************/
 #pragma mark - DJIBatteryState
 /*********************************************************************************/
@@ -238,14 +203,6 @@ typedef NS_ENUM (uint8_t, DJIBatterySelfHeatingState) {
  *  right/starboard slot.
  */
 @property(nonatomic, readonly) BOOL isInSingleBatteryMode;
-
-
-/**
- *  The state of the battery's auto heating feature. It is
- *  `DJIBatterySelfHeatingStateUnknown`  if the battery does not support this
- *  feature.
- */
-@property(nonatomic, readwrite) DJIBatterySelfHeatingState selfHeatingState;
 
 @end
 

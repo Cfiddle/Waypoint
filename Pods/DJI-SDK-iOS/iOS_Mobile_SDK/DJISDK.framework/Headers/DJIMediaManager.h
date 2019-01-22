@@ -53,11 +53,6 @@ typedef NS_ENUM(NSUInteger, DJIMediaFileListState) {
     DJIMediaFileListStateDeleting,
 
     /**
-     *  A renaming operation is in progress.
-     */
-    DJIMediaFileListStateRenaming,
-
-    /**
      *  The media manager is synchronizing the file list from the SD card.
      */
     DJIMediaFileListStateSyncing,

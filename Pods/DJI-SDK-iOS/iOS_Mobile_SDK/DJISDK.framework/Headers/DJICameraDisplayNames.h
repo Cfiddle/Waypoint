@@ -162,10 +162,4 @@ extern NSString *const DJICameraDisplayNameMavic2ProCamera;
  */
 extern NSString *const DJICameraDisplayNamePayload;
 
-
-/**
- *  The display name for Mavic 2 Enterprise.
- */
-extern NSString *const DJICameraDisplayNameMavic2EnterpriseCamera;
-
 #endif /* DJICameraDisplayNames_h */

@@ -257,24 +257,6 @@ FOUNDATION_EXPORT const unsigned char DJISDKVersionString[];
 /*********************************************************************************/
 #import <DJISDK/DJIRemoteLogger.h>
 
-/*********************************************************************************/
-#pragma mark - AccessLocker
-/*********************************************************************************/
-
-#import <DJISDK/DJIAccessLocker.h>
-#import <DJISDK/DJIAccessLockerBaseTypes.h>
-
-/*********************************************************************************/
-#pragma mark - Accessory Aggregation
-/*********************************************************************************/
-
-#import <DJISDK/DJIAccessoryAggregation.h>
-#import <DJISDK/DJIAccessoryAggregationState.h>
-#import <DJISDK/DJISpotlight.h>
-#import <DJISDK/DJIBeacon.h>
-#import <DJISDK/DJISpeaker.h>
-#import <DJISDK/DJIAudioMediaFile.h>
-#import <DJISDK/DJIAccessoryBaseTypes.h>
 
 /*********************************************************************************/
 #pragma mark - Keyed Interface
@@ -290,6 +272,6 @@ FOUNDATION_EXPORT const unsigned char DJISDKVersionString[];
 #import <DJISDK/DJIFlightControllerKey.h>
 #import <DJISDK/DJIRemoteControllerKey.h>
 #import <DJISDK/DJIAirLinkKey.h>
-#import <DJISDK/DJIAccessoryKey.h>
 #import <DJISDK/DJIPayloadKey.h>
 #import <DJISDK/DJIHandheldControllerKey.h>
+
